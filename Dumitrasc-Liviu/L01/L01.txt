@@ -1,0 +1,12 @@
+Skype este o aplicatie de tipul "software as a service" care le permite utilizatorilor realizarea de videoconferinte. 
+
+Aplicatia a fost lansata in august 2003, iar pana in luna martie a anului 2020 aceasta a ajuns sa fie utilizata de 100 de milioane de utilizatori lunari.
+
+Utilizatorii dispun de o interfata prin intermediul careia acceseaza toate facilitatile oferite de catre soft, fara a fi preocupati de ce se intampla in spatele aplicatiei. De regula, exista servicii gratis, insa companiile trebuie sa opteze pentru un abonament lunar pentru a utiliza aplicatia.
+
+Printre serviciile oferite de aplicatie, se numara:
+	-chat text
+	-apel video
+	-apel audio
+	-partajarea fisierelor
+	-apeluri de grup
