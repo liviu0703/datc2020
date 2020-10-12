@@ -19,10 +19,14 @@ namespace L03
         static DriveService service;
         static UserCredential credential;
 
+        static string fileName = "ceva.txt";
+        static string contentType = "text/plain"; 
+
         static void Main(string[] args)
         {
             Initialize();
             GetAllFiles();
+            UploadFile(service, fileName, contentType);
         }
 
         static void Initialize(){
@@ -76,6 +80,19 @@ namespace L03
             }
         }
 
-        
+        static void UploadFile(DriveService service, string fileName, string contentType)
+        {
+            var fileToDrive = new Google.Apis.Drive.v3.Data.File();
+            fileToDrive.Name = fileName;
+            fileToDrive.Parents = new List<string> { "root" };
+            FilesResource.CreateMediaUpload request;
+            using(var stream = new FileStream(fileName, FileMode.Open, FileAccess.ReadWrite))
+            {
+                request = service.Files.Create(fileToDrive, stream, contentType);
+                request.Upload();
+            }
+            var file = request.ResponseBody;
+            Console.WriteLine("File upload: " + file.Id);
+        }
     }
 }
